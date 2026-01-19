@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Raina - Portfolio</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #1b0a2c 100%);
+            min-height: 100vh;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #252d50;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .role {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .hero .university {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #4c63cc;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #f8f9fa;
+        }
+
+        /* ===== MAIN CONTENT CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== PROJECTS SECTION ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-info {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .role {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h1>Soham Raina</h1>
+        <div class="role">2nd Year Computer Science Major</div>
+        <div class="university">VIT Vellore</div>
+        <p>
+            I'm a 2nd year Computer Science student at VIT Vellore, passionate about creating efficient, user-friendly digital solutions. Currently focused on full-stack development and exploring deeper CS concepts.
+            
+            
+        </p>
+        <a href="example.com" class="btn">View Finance Manager Project →</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML & CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Data Structures</div>
+                <div class="skill-item">Web Development</div>
+                <div class="skill-item">UI/UX Design</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>College Finance Manager</h3>
+                    <p>
+                        A budgeting application designed specifically for college students 
+                        to track expenses, manage monthly budgets, and develop better 
+                        financial habits.
+                    </p>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+                <p><a href="mailto:soham.raina2024@vitstudent.ac.in">soham.raina2024@vitstudent.ac.in</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p> Designed and Built by Soham Raina.</p>
+        <p>VIT Vellore . 2026</p>
+    </footer>
+</body>
+</html>
